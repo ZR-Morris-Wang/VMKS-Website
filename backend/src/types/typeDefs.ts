@@ -74,6 +74,29 @@ const typeDefs = `#graphql
     fee: Int!
     remain: Int!
   }
+  
+  input ThreeDPInput{
+    name:         String!
+    category:     String!
+    position:     String!
+    description:  String!
+    photoLink:    String!
+    usage:        Int!
+    tutorialLink: String!
+    waiting:      User!
+  }
+
+  input UserMaterialInput{
+    id:         Int!
+    name:       String!
+    partName:   String
+    borrower:   User!
+    borrowerId: Int!
+    borrowNum:  Int!
+    borrowDate: String!
+    returnDate: String
+    status:     String!
+  }
 
   type Announcement {
     id: Int!
@@ -207,6 +230,8 @@ const typeDefs = `#graphql
     AddDisposableMaterial(disposableMaterialInput: DisposableMaterialInput!): DisposableMaterial
     AddMachine(machineInput: MachineInput!): Machine
     AddMaterial(materialInput: MaterialInput!): Material
+    AddUserMaterial(userMaterialInput: UserMaterialInput!): UserMaterial
+    AddThreeDP(threeDPInput: ThreeDPInput!): ThreeDP
   }
 `;
 
