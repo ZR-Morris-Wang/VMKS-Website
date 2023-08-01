@@ -102,7 +102,7 @@ model UserMaterial {
   borrower   User      @relation(fields: [borrowerId], references: [id])
   borrowerId Int
   borrowNum  Int
-  borrowDate DateTime
-  returnDate DateTime?
+  borrowDate String
+  returnDate String?
   status     String
 }

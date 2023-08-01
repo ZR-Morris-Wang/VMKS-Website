@@ -83,19 +83,25 @@ const typeDefs = `#graphql
     photoLink:    String!
     usage:        Int!
     tutorialLink: String!
-    waiting:      User!
   }
 
   input UserMaterialInput{
-    id:         Int!
     name:       String!
     partName:   String
-    borrower:   User!
     borrowerId: Int!
     borrowNum:  Int!
     borrowDate: String!
     returnDate: String
     status:     String!
+  }
+
+  input UserInput {
+    name: String!
+    studentID: String!
+    password: String!
+    photoLink: String!   
+    threeDPId: Int!            
+    laserCutAvailable: Boolean!        
   }
 
   type Announcement {
@@ -181,7 +187,6 @@ const typeDefs = `#graphql
     photoLink:    String!
     usage:        Int!
     tutorialLink: String!
-    waiting:      User!
   }
 
   type UserMaterial {
@@ -191,8 +196,8 @@ const typeDefs = `#graphql
     borrower:   User!
     borrowerId: Int!
     borrowNum:  Int!
-    borrowDate: DateTime!
-    returnDate: DateTime
+    borrowDate: String!
+    returnDate: String
     status:     String!
   }
 
@@ -205,7 +210,6 @@ const typeDefs = `#graphql
     threeDPUse: ThreeDP
     threeDPId: Int!
     laserCutAvailable: Boolean!
-    borrowHistory: UserMaterial!
   }
 
 
@@ -232,6 +236,7 @@ const typeDefs = `#graphql
     AddMaterial(materialInput: MaterialInput!): Material
     AddUserMaterial(userMaterialInput: UserMaterialInput!): UserMaterial
     AddThreeDP(threeDPInput: ThreeDPInput!): ThreeDP
+    AddUser(userInput: UserInput!) : User
   }
 `;
 

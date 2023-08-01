@@ -1,5 +1,5 @@
 import { prisma } from "../../prisma/client.ts";
-import { AnnouncementInput, ToolInput, DisposableMaterialInput, MachineInput, MaterialInput, UserMaterialInput, ThreeDPInput } from "../types/types.ts";
+import { AnnouncementInput, ToolInput, DisposableMaterialInput, MachineInput, MaterialInput, UserMaterialInput, ThreeDPInput, UserInput } from "../types/types.ts";
 
 const Mutation = {
 
@@ -139,7 +139,7 @@ const Mutation = {
         return newMaterial;
     },
     AddThreeDP: async(_parents, args: {threeDPInput: ThreeDPInput}, context) => {
-        const { name, category, position, description, photoLink, usage, tutorialLink, waiting} = args.threeDPInput;
+        const { name, category, position, description, photoLink, usage, tutorialLink} = args.threeDPInput;
         const newThreeDP = await prisma.threeDP.create({
             data: {
                 name: name,
@@ -149,18 +149,16 @@ const Mutation = {
                 photoLink: photoLink,
                 usage: usage,
                 tutorialLink: tutorialLink,
-                waiting: waiting
             }
         });
         return newThreeDP;
     },
     AddUserMaterial: async(_parents, args: {userMaterialInput: UserMaterialInput}, context) => {
-        const { name, partName, borrower, borrowerId, borrowNum, borrowDate, returnDate, status} = args.userMaterialInput;
+        const { name, partName, borrowerId, borrowNum, borrowDate, returnDate, status} = args.userMaterialInput;
         const newUserMaterial = await prisma.userMaterial.create({
             data: {
                 name: name,
                 partName: partName,
-                borrower: borrower,
                 borrowerId: borrowerId,
                 borrowNum: borrowNum,
                 borrowDate: borrowDate,
@@ -169,6 +167,21 @@ const Mutation = {
             }
         });
         return newUserMaterial;
+    },
+    AddUser: async(_parents, args: {userInput: UserInput}, context) => {
+        const {name, studentID, password, photoLink, threeDPId, laserCutAvailable} = args.userInput;
+        const newUsers = await prisma.user.create({
+            data:{
+                name: name,
+                studentID: studentID,
+                password: password,
+                photoLink: photoLink,
+                threeDPId: threeDPId,
+                laserCutAvailable: laserCutAvailable,
+            }
+        });
+        // console.log(newUsers);
+        return newUsers;
     }
 }
 
