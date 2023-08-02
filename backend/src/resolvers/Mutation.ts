@@ -154,7 +154,8 @@ const Mutation = {
         return newThreeDP;
     },
     AddUserMaterial: async(_parents, args: {userMaterialInput: UserMaterialInput}, context) => {
-        const { name, partName, borrowerId, borrowNum, borrowDate, returnDate, status} = args.userMaterialInput;
+        const { name, partName, borrowerId, borrowNum, status} = args.userMaterialInput;
+        const borrowDate = new Date().toUTCString();
         const newUserMaterial = await prisma.userMaterial.create({
             data: {
                 name: name,
@@ -162,7 +163,7 @@ const Mutation = {
                 borrowerId: borrowerId,
                 borrowNum: borrowNum,
                 borrowDate: borrowDate,
-                returnDate: returnDate,
+                returnDate: null,
                 status: status
             }
         });
