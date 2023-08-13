@@ -4,7 +4,7 @@ import "./HomePage.css"; // Import your custom CSS file
 import envImg from "../images/MKS_environment.jpg"
 import { Link } from 'react-router-dom'
 import { useNavigate } from "react-router-dom"
-
+import { Introduction } from "../component/Introduction";
 export const HomePage = () => {
   const navigate = useNavigate();
   // const navigate = useNavigate();
@@ -87,6 +87,7 @@ export const HomePage = () => {
             </tbody>
           </table>
         </div>
+        <Introduction/>
       </div>
       </div>
     </div>
