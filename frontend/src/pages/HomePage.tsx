@@ -37,7 +37,7 @@ export const HomePage = () => {
           應該要有:簡略公告、常用連結、管理員班表
         </p> */}
         <div style={{ position: 'relative', maxWidth: '100%' }}>
-          <img src={envImg} alt="Environment" style={{ maxWidth: '100%' }} useMap="#image-map" />
+          <img src={envImg} alt="Environment" style={{ width: '100%' }} useMap="#image-map" />
           <map name="image-map">
             <area shape="rect" coords="x1,y1,x2,y2" alt="Learn More" href="LearnMore" />
             {/* Define the coordinates (x1, y1, x2, y2) for the clickable area */}
