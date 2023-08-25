@@ -1,9 +1,9 @@
-import React from "react"
-import Button from '@mui/material/Button';
+import React from "react";
+import Button from "@mui/material/Button";
 import "./HomePage.css"; // Import your custom CSS file
-import envImg from "../images/MKS_environment.jpg"
-import { Link } from 'react-router-dom'
-import { useNavigate } from "react-router-dom"
+import "../images/MKS_environment.jpg";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const HomePage = () => {
   const navigate = useNavigate();
@@ -16,14 +16,50 @@ export const HomePage = () => {
     "Thursday",
     "Friday",
     "Saturday",
-    "Sunday"
+    "Sunday",
   ];
 
   const scheduleData = [
-    ["9:00-12:00", "Brian", "Brian", "Brian", "Brian", "Brian", "Brian", "Brian"],
-    ["13:00-16:00 (A)", "Brian", "Brian", "Brian", "Brian", "Brian", "Brian", "Brian"],
-    ["13:00-16:00 (B)", "Brian", "Brian", "Brian", "Brian", "Brian", "Brian", "Brian"],
-    ["18:00-21:00", "Brian", "Brian", "Brian", "Brian", "Brian", "Brian", "Brian"],
+    [
+      "9:00-12:00",
+      "Brian",
+      "Brian",
+      "Brian",
+      "Brian",
+      "Brian",
+      "Brian",
+      "Brian",
+    ],
+    [
+      "13:00-16:00 (A)",
+      "Brian",
+      "Brian",
+      "Brian",
+      "Brian",
+      "Brian",
+      "Brian",
+      "Brian",
+    ],
+    [
+      "13:00-16:00 (B)",
+      "Brian",
+      "Brian",
+      "Brian",
+      "Brian",
+      "Brian",
+      "Brian",
+      "Brian",
+    ],
+    [
+      "18:00-21:00",
+      "Brian",
+      "Brian",
+      "Brian",
+      "Brian",
+      "Brian",
+      "Brian",
+      "Brian",
+    ],
   ];
 
   return (
@@ -36,58 +72,98 @@ export const HomePage = () => {
           <br />
           應該要有:簡略公告、常用連結、管理員班表
         </p> */}
-        <div style={{ position: 'relative', maxWidth: '100%' }}>
-          <img src={envImg} alt="Environment" style={{ maxWidth: '100%' }} useMap="#image-map" />
+        <div style={{ position: "relative", width: "100%" }}>
+          <img
+            src={require("../images/MKS_environment.jpg")}
+            alt="Environment"
+            style={{ width: "100%" }}
+            useMap="#image-map"
+          />
           <map name="image-map">
-            <area shape="rect" coords="x1,y1,x2,y2" alt="Learn More" href="LearnMore" />
+            <area
+              shape="rect"
+              coords="x1,y1,x2,y2"
+              alt="Learn More"
+              href="LearnMore"
+            />
             {/* Define the coordinates (x1, y1, x2, y2) for the clickable area */}
           </map>
-          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
-            <p style={{ color: '#FFFFFF', fontSize: 'xxx-large', marginBottom: '16px' }}>New To Us ?</p>
-            <p style={{ color: '#FFFFFF', fontSize: 'xxx-large', marginTop: '0px' }}>Click here to learn more!</p>
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              textAlign: "center",
+            }}
+          >
+            <p
+              style={{
+                color: "#FFFFFF",
+                fontSize: "xxx-large",
+                marginBottom: "16px",
+              }}
+            >
+              New To Us ?
+            </p>
+            <p
+              style={{
+                color: "#FFFFFF",
+                fontSize: "xxx-large",
+                marginTop: "0px",
+              }}
+            >
+              Click here to learn more!
+            </p>
             <a href="LearnMore">
               <button>
-                <Link to="/TutorialPage" style={{ textDecoration: "none", color: "Black" }}>
+                <Link
+                  to="/TutorialPage"
+                  style={{ textDecoration: "none", color: "Black" }}
+                >
                   Go
                 </Link>
               </button>
             </a>
-            
           </div>
         </div>
         <div>
           <b>Announcement</b>
           <br />
-          <button onClick={() => navigate("/AnnouncementPage")}>View all</button>
+          <button onClick={() => navigate("/AnnouncementPage")}>
+            View all
+          </button>
           <br />
-          <b><h3>常用連結</h3></b>
+          <b>
+            <h3>常用連結</h3>
+          </b>
           <br />
           <br />
           <div>
             <div style={{ textAlign: "center" }}>
-            <b>Opening Hours</b>
-          </div>
-          <table className="styled-table">
-            <thead>
-              <tr>
-                <th>Time</th>
-                {daysOfWeek.map((day) => (
-                  <th key={day}>{day}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {scheduleData.map((shifts, index) => (
-                <tr key={index}>
-                  {shifts.map((shift, shiftIndex) => (
-                    <td key={shiftIndex}>{shift}</td>
+              <b>Opening Hours</b>
+            </div>
+            <table className="styled-table">
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  {daysOfWeek.map((day) => (
+                    <th key={day}>{day}</th>
                   ))}
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {scheduleData.map((shifts, index) => (
+                  <tr key={index}>
+                    {shifts.map((shift, shiftIndex) => (
+                      <td key={shiftIndex}>{shift}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
       </div>
     </div>
   );
@@ -122,4 +198,3 @@ export const HomePage = () => {
 //     </div>
 //   )
 // }
-
