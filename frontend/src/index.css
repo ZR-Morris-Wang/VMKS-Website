@@ -13,47 +13,6 @@ code {
     monospace;
 }
 
-nav {
-  background-color: #FFFFFF;
-  padding: 0;
-}
-
-nav #header {
-  padding: 0px;
-  background-color: #FFFFFF;
-  padding: 16px 32px;
-}
-nav #navbar {
-  padding: 0px;
-  background-color: aliceblue;
-  padding: 5px 0;
-  height: auto;
-}
-
-nav dl {
-  float:right;
-  position:relative;
-  text-align:center;
-  margin: 0px 0px 0px 0px ;
-}
-
-nav dl dt {
-  padding:0 0 0 0;
-  
-}
-
-nav dl dd {
-  display:none;
-  text-align:center;
-  margin:auto;
-  padding:0px 0;
-  color:black
-}
-
-nav dl:hover dd {
-  display:block;
-}
-
 footer{
   background-color: aliceblue;
   text-align: center;
