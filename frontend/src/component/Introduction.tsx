@@ -1,4 +1,5 @@
 import React from "react"
+import '../CSS/Intro.css'
 import { useState } from "react";
 import { Link,Navigate,useNavigate } from "react-router-dom";
 import Card from '@mui/material/Card';
@@ -17,10 +18,11 @@ const cardstyle={
 
 const boxstyle={
     margin:"auto",
-    marginTop:"20px",
-    marginBottom:"20px",
+    marginTop:"50px",
+    marginBottom:"50px",
     width:"84%",
-    borderWidth:"3px",    
+    borderWidth:"3px",
+    textAlign:"center"
 };
 
 const buttonstyle={
@@ -67,48 +69,37 @@ const hover={
 }
 export const Introduction = () =>{
     const navigate = useNavigate();
-    const introd= document.getElementsByClassName('intro') as  HTMLCollectionOf<HTMLElement>;
-    // document.getElementsByClassName('intro').setAttribute("style","background-color:aliceblue")
-    
-    // for (var i=0; i<introd.length; i++){
-    //     introd[i].onmouseover=function(){
-    //         introd[i].style.backgroundColor="aliceblue";
-    //     };
-    //     introd[i].onmouseout=function(){    
-    //         introd[i].style.backgroundColor="#ffffff";
-    //     }    
-    // }
-    const [color, set] = useState("#ffffff");
+    const [state, set] = useState(Boolean(false));
     const change = ()=>{
-        set("aliceblue");
+        set(Boolean(true));
     }
     const change2 = ()=>{
-        set("#ffffff");
+        set(Boolean(false));   
     }
     return (
         <Box sx={boxstyle}>
-            <div>Introduction</div>
+            <div style={{margin: '20px 0px 20px 0px', display:'inline'}}><h2 style={{marginBottom: '30px' }}>|  Introduction  |</h2></div>
             <table style={{borderCollapse:"separate" as "separate",borderSpacing:0,width:"100%"}}>
                 <tr>
-                    <td style={Object.assign({backgroundColor:color},cardstyle,ul)} onMouseOver={change} onMouseOut={change2} className="intro">
+                    <td style={Object.assign({},cardstyle,ul)} /*onMouseOver={()=>change()} onMouseOut={()=>change2()}*/>
                         <Button style={buttonstyle} onClick={()=>navigate("../MaterialAndToolPage")}>
                             <div style={linkstyle}>Disposable Material</div>
                         </Button>
                         <Typography>I'm disposable</Typography>
                     </td>
-                    <td style={Object.assign({},cardstyle,ur)} onMouseOver={change} onMouseOut={change2} className="intro">
+                    <td style={Object.assign({},cardstyle,ur)} className="intro">
                         <Button style={buttonstyle} onClick={()=>navigate("../MaterialAndToolPage")}>
                             <div style={linkstyle}>Material</div>
                         </Button>
                     </td>
                 </tr>
                 <tr>
-                    <td style={Object.assign({},cardstyle,ll)} onMouseOver={change} onMouseOut={change2} className="intro">
+                    <td style={Object.assign({},cardstyle,ll)}  className="intro">
                         <Button style={buttonstyle} onClick={()=>navigate("../MaterialAndToolPage")}>
                             <div style={linkstyle}>Tool</div>
                         </Button>
                     </td>
-                    <td style={Object.assign({},cardstyle,lr)} onMouseOver={change} onMouseOut={change2}className="intro">
+                    <td style={Object.assign({},cardstyle,lr)}  className="intro">
                         <Button style={buttonstyle} onClick={()=>navigate("../MaterialAndToolPage")}>
                             <div style={linkstyle}>Machine</div>
                         </Button>
@@ -116,5 +107,7 @@ export const Introduction = () =>{
                 </tr>
             </table>
         </Box>
+        
+        
     )
 }
