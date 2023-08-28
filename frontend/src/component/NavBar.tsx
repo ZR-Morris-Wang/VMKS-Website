@@ -34,7 +34,6 @@ export const NavBar = () => {
   const navigate = useNavigate();
   return(
     <nav style={{ position:"relative", zIndex:10}}>
-
       <div id="header" className="button-container">
         <Link to='/'><img src={logo} alt="logo" height="50"/></Link>
         <Button variant="contained"  size="medium" style={{float:"right", backgroundColor:'#67b9c7ff'}} onClick={()=>navigate("/LoginPage")}>
@@ -43,17 +42,13 @@ export const NavBar = () => {
           </Link>
         </Button>
       </div>
-
       <Box>
         <AppBar position="static" style={{backgroundColor:'#67B9C7'}}>
           <Toolbar style={{display: 'flex', justifyContent: 'flex-end', minHeight:'24px',position:'relative'}}>
-            
               <dl>
                 <dt><Button variant="text" size="large" style={buttonstyle} onClick={()=>navigate("/IntroductionPage")}>MKS介紹</Button></dt>
               </dl>
-
               <Button variant="text" size="large" style={buttonstyle} onClick={()=>navigate("MapPage")}>地圖導覽</Button>
-              
               <dl>
                 <dt><Button variant="text" size="large" style={buttonstyle} onClick={()=>navigate("/MaterialAndToolPage")}>資源一覽</Button></dt>
                 <div style={divstyle}>
@@ -63,11 +58,9 @@ export const NavBar = () => {
                   <dd><Button variant="text" size="large" style={buttonstyle2} onClick={()=>navigate("/")}>機台</Button></dd>
                 </div>
               </dl>
-
               <dl>
                 <dt><Button variant="text" size="large" style={Object.assign({borderRightWidth: '3px'},buttonstyle)} onClick={()=>navigate("/TutorialPage")}>新手教學</Button></dt>
               </dl>
-              
             </Toolbar>
         </AppBar>
       </Box>
