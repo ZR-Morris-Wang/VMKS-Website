@@ -27,12 +27,13 @@ const divstyle={
   position:"absolute" as "absolute",
   width:"87px",
   left:"3px",
-  margin:"0px 0 0 0"
+  margin:"0px 0 0 0",
+  zIndex: -1
 }
 export const NavBar = () => {
   const navigate = useNavigate();
   return(
-    <nav style={{zIndex:10, position:"relative"}}>
+    <nav style={{ position:"relative", zIndex:10}}>
 
       <div id="header" className="button-container">
         <Link to='/'><img src={logo} alt="logo" height="50"/></Link>
@@ -45,7 +46,7 @@ export const NavBar = () => {
 
       <Box>
         <AppBar position="static" style={{backgroundColor:'#67B9C7'}}>
-          <Toolbar style={{display: 'flex', justifyContent: 'flex-end', minHeight:'24px'}}>
+          <Toolbar style={{display: 'flex', justifyContent: 'flex-end', minHeight:'24px',position:'relative'}}>
             
               <dl>
                 <dt><Button variant="text" size="large" style={buttonstyle} onClick={()=>navigate("/IntroductionPage")}>MKS介紹</Button></dt>
