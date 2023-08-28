@@ -78,31 +78,34 @@ export const Introduction = () =>{
     }
     return (
         <Box sx={boxstyle}>
-            <div style={{margin: '20px 0px 20px 0px', display:'inline'}}><h2 style={{marginBottom: '30px' }}>|  Introduction  |</h2></div>
-            <table style={{borderCollapse:"separate" as "separate",borderSpacing:0,width:"100%"}}>
-                <tr>
-                    <td style={Object.assign({},cardstyle,ul)} /*onMouseOver={()=>change()} onMouseOut={()=>change2()}*/>
+            <div style={{margin: '20px 0px 20px 0px', display:'inline'}}><h2 style={{marginBottom: '30px' , fontSize:'28px'}}>  Introduction  </h2></div>
+            <table style={{borderCollapse:"separate" as "separate",borderSpacing:0,width:"100%"}} className="intro">
+                <tr >
+                    <td style={Object.assign({},cardstyle,ul)}   /*onMouseOver={()=>change()} onMouseOut={()=>change2()}*/>
                         <Button style={buttonstyle} onClick={()=>navigate("../MaterialAndToolPage")}>
                             <div style={linkstyle}>Disposable Material</div>
                         </Button>
                         <Typography>I'm disposable</Typography>
                     </td>
-                    <td style={Object.assign({},cardstyle,ur)} className="intro">
+                    <td style={Object.assign({},cardstyle,ur)} >
                         <Button style={buttonstyle} onClick={()=>navigate("../MaterialAndToolPage")}>
                             <div style={linkstyle}>Material</div>
                         </Button>
+                        <Typography>UI</Typography>
                     </td>
                 </tr>
-                <tr>
-                    <td style={Object.assign({},cardstyle,ll)}  className="intro">
+                <tr className="intro">
+                    <td style={Object.assign({},cardstyle,ll)}>
                         <Button style={buttonstyle} onClick={()=>navigate("../MaterialAndToolPage")}>
                             <div style={linkstyle}>Tool</div>
                         </Button>
+                        <Typography>Don't be a tool guy (工具人)</Typography>
                     </td>
-                    <td style={Object.assign({},cardstyle,lr)}  className="intro">
+                    <td style={Object.assign({},cardstyle,lr)}>
                         <Button style={buttonstyle} onClick={()=>navigate("../MaterialAndToolPage")}>
                             <div style={linkstyle}>Machine</div>
                         </Button>
+                        <Typography>Learning</Typography>
                     </td>
                 </tr>
             </table>

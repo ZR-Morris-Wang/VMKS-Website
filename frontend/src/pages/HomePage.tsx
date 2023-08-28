@@ -37,12 +37,12 @@ export const HomePage = () => {
           應該要有:簡略公告、常用連結、管理員班表
         </p> */}
         <div style={{ position: 'relative', maxWidth: '100%' }}>
-          <img src={envImg} alt="Environment" style={{ width: '100%' }} useMap="#image-map" />
+          <img src={envImg} alt="Environment" style={{ width: '100%', zIndex:5, position:"relative"}} useMap="#image-map" />
           <map name="image-map">
             <area shape="rect" coords="x1,y1,x2,y2" alt="Learn More" href="LearnMore" />
             {/* Define the coordinates (x1, y1, x2, y2) for the clickable area */}
           </map>
-          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
+          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', zIndex:8  }}>
             <p style={{ color: '#FFFFFF', fontSize: 'xxx-large', marginBottom: '16px' }}>New To Us ?</p>
             <p style={{ color: '#FFFFFF', fontSize: 'xxx-large', marginTop: '0px' }}>Click here to learn more!</p>
             <a href="LearnMore">

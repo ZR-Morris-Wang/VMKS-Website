@@ -32,7 +32,7 @@ const divstyle={
 export const NavBar = () => {
   const navigate = useNavigate();
   return(
-    <nav>
+    <nav style={{zIndex:10, position:"relative"}}>
 
       <div id="header" className="button-container">
         <Link to='/'><img src={logo} alt="logo" height="50"/></Link>
