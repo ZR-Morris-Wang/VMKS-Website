@@ -352,12 +352,15 @@ export type Query = {
   SearchMachineByName?: Maybe<Array<Maybe<Machine>>>;
   SearchMachinesByCategory?: Maybe<Array<Maybe<Machine>>>;
   SearchMachinesByPosition?: Maybe<Array<Maybe<Machine>>>;
+  SearchMaterialByName?: Maybe<Array<Maybe<Material>>>;
   SearchMaterialsByCategory?: Maybe<Array<Maybe<Material>>>;
   SearchMaterialsByPosition?: Maybe<Array<Maybe<Material>>>;
   SearchThreeDPByCategory?: Maybe<Array<Maybe<ThreeDp>>>;
   SearchThreeDPByPosition?: Maybe<Array<Maybe<ThreeDp>>>;
   SearchToolsByCategory?: Maybe<Array<Maybe<Tool>>>;
+  SearchToolsByName?: Maybe<Array<Maybe<Tool>>>;
   SearchToolsByPosition?: Maybe<Array<Maybe<Tool>>>;
+  SearchUserByName?: Maybe<Array<Maybe<User>>>;
 };
 
 
@@ -391,6 +394,11 @@ export type QuerySearchMachinesByPositionArgs = {
 };
 
 
+export type QuerySearchMaterialByNameArgs = {
+  name: Scalars['String']['input'];
+};
+
+
 export type QuerySearchMaterialsByCategoryArgs = {
   category: Scalars['String']['input'];
 };
@@ -416,8 +424,18 @@ export type QuerySearchToolsByCategoryArgs = {
 };
 
 
+export type QuerySearchToolsByNameArgs = {
+  name: Scalars['String']['input'];
+};
+
+
 export type QuerySearchToolsByPositionArgs = {
   position: Scalars['String']['input'];
+};
+
+
+export type QuerySearchUserByNameArgs = {
+  name: Scalars['String']['input'];
 };
 
 export type Subscription = {
