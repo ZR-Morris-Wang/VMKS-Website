@@ -6,7 +6,7 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import "../images/vmks_logo.png"; //./VMKS-Website/frontend/src/vmks_logo.png
-export const NavBar = () => {
+export const NavBar:React.FC = () => {
   return (
     <nav>
       <div

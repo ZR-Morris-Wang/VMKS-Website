@@ -6,7 +6,7 @@ import { NotFound } from "./pages/NotFound";
 import { HomePage } from "./pages/HomePage";
 import Footer from "./component/Footer";
 import MaterialDetail from "./component/MaterialAndTool/MaterialDetail";
-import Advanced from "./AdvancedGroup";
+import Advanced from "./Advanced";
 
 const LoginPage = lazy(() => import("./pages/LoginPage"));
 const IntroductionPage = lazy(() => import("./pages/IntroductionPage"));

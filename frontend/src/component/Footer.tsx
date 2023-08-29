@@ -1,10 +1,10 @@
 import React from 'react'
-import vmks_footer_logo from "../images/footer_logo.png"
+import "../images/footer_logo.png"
 const Footer = () => {
   return (
     <footer>
       <img
-        src={vmks_footer_logo}
+        src={require('../images/footer_logo.png')}
         alt="Footer"
         style={{ width: '100px', height: '100px', float: 'left', marginRight: '100px' }}
       />

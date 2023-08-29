@@ -1,5 +1,5 @@
 import React from "react";
-import Blog from "./pages/Blog";
+import Post from "./pages/Post";
 import BlogHome from "./pages/BlogHome";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./index.css";
@@ -9,7 +9,7 @@ const Forum: React.FC = () => {
     <div className="container">
       <Routes>
         <Route path="/" element={<BlogHome />} />
-        <Route path="/{id}" element={<Blog />} />
+        <Route path="/:id" element={<Post />} />
       </Routes>
     </div>
   );

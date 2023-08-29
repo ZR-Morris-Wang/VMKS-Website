@@ -7,7 +7,7 @@ import EmptyList from "../../components/Common/Empty";
 import "./styles.css";
 import { BlogData } from "../../components/Home/BlogList/BlogItem";
 
-const Blog: React.FC = () => {
+const Post: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [blog, setBlog] = useState<BlogData | null>(null);
 
@@ -53,4 +53,4 @@ const Blog: React.FC = () => {
   );
 };
 
-export default Blog;
+export default Post;
