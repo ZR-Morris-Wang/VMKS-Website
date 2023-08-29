@@ -505,7 +505,7 @@ const Mutation = {
             throw new Error("threeDP not found!");
         }
 
-        const editThreeDP = await prisma.threeDP.update({
+        const updateThreeDP = await prisma.threeDP.update({
             where: {
                 id: id
             },
@@ -520,8 +520,8 @@ const Mutation = {
                 broken: broken
             }
         });
-        pubsub.publish('THREEDP_EDIT', { ThreeDPEdited: editThreeDP });
-        return editThreeDP;
+        pubsub.publish('THREEDP_UPDATED', { ThreeDPUpdated: updateThreeDP });
+        return updateThreeDP;
     },
 
     AddUserMaterial: async (_parents, args: { userMaterialInput: UserMaterialInput }, context) => {
@@ -663,7 +663,7 @@ const Mutation = {
             }
         }
 
-        const editUserMaterial = await prisma.userMaterial.update({
+        const updateUserMaterial = await prisma.userMaterial.update({
             where: {
                 id: id
             },
@@ -677,8 +677,8 @@ const Mutation = {
                 status: status
             }
         });
-        pubsub.publish('USERMATERIAL_EDIT', { UserMaterialEdited: editUserMaterial });
-        return editUserMaterial;
+        pubsub.publish('USERMATERIAL_UPDATED', { UserMaterialUpdated: updateUserMaterial });
+        return updateUserMaterial;
     },
 
     AddUser: async (_parents, args: { userInput: UserInput }, context) => {
@@ -786,7 +786,7 @@ const Mutation = {
             throw new Error("user not found!");
         }
 
-        const editUser = await prisma.user.update({
+        const updateUser = await prisma.user.update({
             where: {
                 id: id
             },
@@ -798,8 +798,8 @@ const Mutation = {
                 isAdmin: isAdmin
             }
         });
-        pubsub.publish('USER_EDIT', { UserEdited: editUser });
-        return editUser;
+        pubsub.publish('USER_UPDATED', { UserUpdated: updateUser });
+        return updateUser;
     },
 
     UserMachineUsageUpdate: async(_parents, args: { id: number, userMachineUpdateInput: UserMachineUpdateInput }, context) => {
