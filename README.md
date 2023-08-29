@@ -63,6 +63,15 @@ pnpm studio
 
 to open up prisma studio to check whether the data is properly saved
 
+### Step 5 : Initialize Database
+
+```sh
+cd backend
+pnpm initData
+```
+
+This will add default data to the database
+
 ### Problems may occur
 
 kill the port being stucked : `sudo kill -9 $(sudo lsof -t -i:port)`. If you want to kill port 8080, type : `sudo kill -9 $(sudo lsof -t -i:8080)`
