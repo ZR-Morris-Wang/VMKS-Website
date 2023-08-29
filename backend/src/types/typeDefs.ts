@@ -355,13 +355,13 @@ const typeDefs = `#graphql
     MaterialUpdated: Material
     ThreeDPCreated: ThreeDP
     ThreeDPDeleted: ThreeDP
-    ThreeDPEdited: ThreeDP
+    ThreeDPUpdated: ThreeDP
     UserMaterialCreated: UserMaterial
     UserMaterialDeleted: UserMaterial
-    UserMaterialEdited: UserMaterial
+    UserMaterialUpdated: UserMaterial
     UserCreated: User
     UserDeleted: User
-    UserEdited: User
+    UserUpdated: User
     UserMachineUpdate: User
     ArticleCreated: Article
   }
