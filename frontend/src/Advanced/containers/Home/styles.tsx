@@ -6,8 +6,8 @@ import "../../assets/vmks_dusk_ui_bg_v2.png";
 
 export const GlobalStyles = createGlobalStyle`
   body, html {
-    font-family: "Arial", sans-serif;
-    line-height: 5.5;
+    font-family: "Cabin", sans-serif;
+    //line-height: 5.5;
     //background-color: #000000;
     color: white;
     //color-scheme: dark;

@@ -59,7 +59,9 @@ const NavBar: React.FC = () => {
               setExtendNavbar((curr) => !curr);
             }}
           >
-            <NavbarLinkExtended to="/map-guide">Map-Guide</NavbarLinkExtended>
+            <NavbarLinkExtended to="/advanced/map-guide">
+              Map-Guide
+            </NavbarLinkExtended>
           </ClosedLinkButton>
 
           <ClosedLinkButton
@@ -67,7 +69,7 @@ const NavBar: React.FC = () => {
               setExtendNavbar((curr) => !curr);
             }}
           >
-            <NavbarLinkExtended to="/forum"> Forum</NavbarLinkExtended>
+            <NavbarLinkExtended to="/advanced/forum"> Forum</NavbarLinkExtended>
           </ClosedLinkButton>
 
           <ClosedLinkButton
@@ -75,7 +77,7 @@ const NavBar: React.FC = () => {
               setExtendNavbar((curr) => !curr);
             }}
           >
-            <NavbarLinkExtended to="/users-guide">
+            <NavbarLinkExtended to="/advanced/users-guide">
               Users-Guide
             </NavbarLinkExtended>
           </ClosedLinkButton>
@@ -85,7 +87,7 @@ const NavBar: React.FC = () => {
               setExtendNavbar((curr) => !curr);
             }}
           >
-            <NavbarLinkExtended to="/about">About</NavbarLinkExtended>
+            <NavbarLinkExtended to="/advanced/about">About</NavbarLinkExtended>
           </ClosedLinkButton>
         </NavbarExtendedContainer>
       )}

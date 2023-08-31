@@ -122,5 +122,6 @@ export const ClosedLinkButton = styled.button`
   //height: 25%;
   padding: 20px;
   opacity: 0.98;
+  background-color: #2b2b2b;
   //border: 1px solid white;
 `;
