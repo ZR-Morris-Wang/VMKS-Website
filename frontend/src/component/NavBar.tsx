@@ -36,7 +36,11 @@ export const NavBar = () => {
     <nav style={{ position: "relative", zIndex: 10 }}>
       <div id="header" className="button-container">
         <Link to="/">
-          <img src={require("../images/vmks_logo.png")} alt="logo" height="50" />
+          <img
+            src={require("../images/vmks_logo.png")}
+            alt="logo"
+            height="50"
+          />
         </Link>
         <Button
           variant="contained"
@@ -141,10 +145,7 @@ export const NavBar = () => {
                 <Button
                   variant="text"
                   size="large"
-                  style={Object.assign(
-                    { borderRightWidth: "3px" },
-                    buttonstyle
-                  )}
+                  style={buttonstyle}
                   onClick={() => navigate("/TutorialPage")}
                 >
                   新手教學
@@ -162,7 +163,7 @@ export const NavBar = () => {
                   )}
                   onClick={() => navigate("/advanced")}
                 >
-                  新手教學
+                  進階功能
                 </Button>
               </dt>
             </dl>

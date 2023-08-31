@@ -455,17 +455,17 @@ export type Subscription = {
   MaterialUpdated?: Maybe<Material>;
   ThreeDPCreated?: Maybe<ThreeDp>;
   ThreeDPDeleted?: Maybe<ThreeDp>;
-  ThreeDPEdited?: Maybe<ThreeDp>;
+  ThreeDPUpdated?: Maybe<ThreeDp>;
   ToolCreated?: Maybe<Tool>;
   ToolDeleted?: Maybe<Tool>;
   ToolUpdated?: Maybe<Tool>;
   UserCreated?: Maybe<User>;
   UserDeleted?: Maybe<User>;
-  UserEdited?: Maybe<User>;
   UserMachineUpdate?: Maybe<User>;
   UserMaterialCreated?: Maybe<UserMaterial>;
   UserMaterialDeleted?: Maybe<UserMaterial>;
-  UserMaterialEdited?: Maybe<UserMaterial>;
+  UserMaterialUpdated?: Maybe<UserMaterial>;
+  UserUpdated?: Maybe<User>;
 };
 
 export type ThreeDp = {
