@@ -8,7 +8,7 @@
     "license": "ISC",
     "scripts": {
         "install:all": "pnpm install && cd frontend && pnpm install && cd .. && cd backend && pnpm install",
-        "frontend": "cd frontend && pnpm start",
+        "frontend": "cd frontend && pnpm dev",
         "backend": "cd backend && pnpm start"
     },
     "dependencies": {

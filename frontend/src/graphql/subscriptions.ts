@@ -1,4 +1,4 @@
-import { gql } from "../__generated__"
+import { gql } from "../__generated__";
 
 const ANNOUNCEMENT_CREATED_SUBSCRIPTION = gql(`
     subscription AnnouncementCreated {

@@ -1,7 +1,8 @@
 // NavBar.tsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import ImgURL from "../../assets/vmks_logo-removebg.png";
+// import styled from "styled-components";
 import {
   NavContainer,
   RightContainer,
@@ -27,10 +28,7 @@ const NavBar: React.FC = () => {
         {/* left container with logo */}
         <LeftContainer>
           <Link to="/advanced">
-            <Logo
-              src={require("../../assets/vmks_logo-removebg.png")}
-              alt="Website Logo"
-            />
+            <Logo src={ImgURL} alt="Website Logo" />
           </Link>
         </LeftContainer>
 

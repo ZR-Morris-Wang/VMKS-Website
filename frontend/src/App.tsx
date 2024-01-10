@@ -1,24 +1,26 @@
-import React, { lazy, Suspense } from "react";
+import { lazy, Suspense } from "react";
 import { Routes, Route, useMatch } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { NavBar } from "./component/NavBar";
-import { NotFound } from "./pages/NotFound";
-import { HomePage } from "./pages/HomePage";
-import Footer from "./component/Footer";
-import MaterialDetail from "./component/MaterialAndTool/MaterialDetail";
+import { NavBar } from "./components/NavBar";
+import { NotFound } from "./containers/NotFound";
+import { HomePage } from "./containers/HomePage";
+import Footer from "./components/Footer";
+import MaterialDetail from "./components/MaterialAndTool/MaterialDetail";
 import Advanced from "./Advanced";
 
-const LoginPage = lazy(() => import("./pages/LoginPage"));
-const IntroductionPage = lazy(() => import("./pages/IntroductionPage"));
-const TutorialPage = lazy(() => import("./pages/TutorialPage"));
-const MapPage = lazy(() => import("./pages/MapPage"));
-const MaterialAndToolPage = lazy(() => import("./pages/MaterialAndToolPage"));
-const ShoppingList = lazy(() => import("./pages/ShoppingList"));
-const AnnouncementPage = lazy(() => import("./pages/AnnouncementPage"));
-const Announcement = lazy(() => import("./component/Announcement"));
-const AnnouncementCreated = lazy(() => import("./component/Subscription"));
-const Material = lazy(() => import("./component/MaterialAndTool/Material"));
-const Tool = lazy(() => import("./component/MaterialAndTool/Tool"));
+const LoginPage = lazy(() => import("./containers/LoginPage"));
+const IntroductionPage = lazy(() => import("./containers/IntroductionPage"));
+const TutorialPage = lazy(() => import("./containers/TutorialPage"));
+const MapPage = lazy(() => import("./containers/MapPage"));
+const MaterialAndToolPage = lazy(
+  () => import("./containers/MaterialAndToolPage")
+);
+const ShoppingList = lazy(() => import("./containers/ShoppingList"));
+const AnnouncementPage = lazy(() => import("./containers/AnnouncementPage"));
+const Announcement = lazy(() => import("./components/Announcement"));
+const AnnouncementCreated = lazy(() => import("./components/Subscription"));
+// const Material = lazy(() => import("./components/MaterialAndTool/Material"));
+const Tool = lazy(() => import("./components/MaterialAndTool/Tool"));
 
 function App() {
   const match = useMatch("/advanced/*");

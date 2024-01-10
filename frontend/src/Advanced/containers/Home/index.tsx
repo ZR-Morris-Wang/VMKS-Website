@@ -1,13 +1,18 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { useState, useEffect } from "react";
 import {
-  BrowserRouter as Router,
+  // BrowserRouter as Router,
   Route,
   Routes,
   useMatch,
 } from "react-router-dom";
-import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
-import styled from "styled-components";
+import {
+  // Panel,
+  PanelGroup,
+  // PanelResizeHandle
+} from "react-resizable-panels";
+// import styled from "styled-components";
+import ImageURL from "../../assets/vmks_dusk_ui_bg_v2.png";
 import {
   GlobalStyles,
   StyledPanel,
@@ -19,7 +24,7 @@ import {
 import "../../assets/vmks_logo-removebg.png";
 import "../../assets/vmks_dusk_ui_bg_v2.png";
 import NavBar from "../../components/NavBar";
-import SideBar from "../../components/SideBar";
+// import SideBar from "../../components/SideBar";
 import Footer from "../../components/Footer";
 import Forum from "../Forum";
 
@@ -50,10 +55,7 @@ const Home: React.FC = () => {
       </div> */}
 
         {/* background image */}
-        <StyledImg
-          src={require("../../assets/vmks_dusk_ui_bg_v2.png")}
-          alt="Background"
-        />
+        <StyledImg src={ImageURL} alt="Background" />
 
         {/* navbar */}
         <NavBar />
@@ -123,10 +125,7 @@ const Home: React.FC = () => {
         <GlobalStyles />
 
         {/* background image */}
-        <StyledImg
-          src={require("../../assets/vmks_dusk_ui_bg_v2.png")}
-          alt="Background"
-        />
+        <StyledImg src={ImageURL} alt="Background" />
 
         {/* navbar */}
         <NavBar />

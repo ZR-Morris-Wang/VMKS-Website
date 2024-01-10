@@ -1,10 +1,9 @@
-// import React from "react";
-import "../../assets/footer_logo.png";
-import ImageURL from "../../assets/footer_logo.png";
-// import { LogoContainer, IconContainer } from "./sytles";
+// import React from 'react'
+import ImageURL from "../images/footer_logo.png";
+// import "../images/footer_logo.png"
 const Footer = () => {
   return (
-    <footer style={{ backgroundColor: "#868484" }}>
+    <footer>
       <img
         src={ImageURL}
         alt="Footer"
@@ -23,7 +22,6 @@ const Footer = () => {
           style={{
             width: "50px",
             height: "50px",
-            // backgroundColor: "white",
             /*float: 'left',
             marginRight: '10px',*/
           }}
@@ -38,7 +36,6 @@ const Footer = () => {
           style={{
             width: "50px",
             height: "50px",
-            // backgroundColor: "white",
             /*float: 'left',
             marginRight: '10px',*/
           }}
