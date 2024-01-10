@@ -1,4 +1,4 @@
-import { gql } from "../__generated__"
+import { gql } from "../__generated__";
 
 const ADD_ANNOUNCEMENT_MUTATION = gql(`
     mutation AddAnnouncement($announcementInput: AnnouncementInput!) {
