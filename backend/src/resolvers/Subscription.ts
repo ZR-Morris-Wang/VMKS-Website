@@ -20,7 +20,7 @@ const Subscription = {
         subscribe: () => pubsub.asyncIterator(['TOOL_UPDATED'])
     },
     DisposableMaterialCreated: {
-        subscribe: () => pubsub.asyncIterator(['DISPOSABLEMATERIAL_CREATED']) 
+        subscribe: () => pubsub.asyncIterator(['DISPOSABLEMATERIAL_CREATED'])
     },
     DisposableMaterialDeleted: {
         subscribe: () => pubsub.asyncIterator(['DISPOSABLEMATERIAL_DELETED'])
@@ -38,7 +38,7 @@ const Subscription = {
         subscribe: () => pubsub.asyncIterator(['MACHINE_UPDATED'])
     },
     MaterialCreated: {
-        subscribe: () => pubsub.asyncIterator(['MATERIAL_CREATED']) 
+        subscribe: () => pubsub.asyncIterator(['MATERIAL_CREATED'])
     },
     MaterialDeleted: {
         subscribe: () => pubsub.asyncIterator(['MATERIAL_DELETED'])
@@ -77,7 +77,7 @@ const Subscription = {
         subscribe: () => pubsub.asyncIterator(['USERMACHINE_UPDATE'])
     },
     ArticleCreated: {
-        subscribe: () => pubsub.asyncIterator(['ARTICLE_CREATED']) 
+        subscribe: () => pubsub.asyncIterator(['ARTICLE_CREATED'])
     }
 }
 

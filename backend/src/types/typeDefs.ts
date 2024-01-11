@@ -29,7 +29,7 @@ const typeDefs = `#graphql
   # Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
 
   ### Define Data Structure ###
-  
+
   scalar DateTime
 
   input AnnouncementInput {
@@ -65,7 +65,7 @@ const typeDefs = `#graphql
     tutorialLink: String!
   }
 
-  input MaterialInput {  
+  input MaterialInput {
     name: String!
     partName: String
     category: String!
@@ -83,7 +83,7 @@ const typeDefs = `#graphql
     usage: Int!
     remain: Int!
   }
-  
+
   input ThreeDPInput{
     name:         String!
     category:     String!
@@ -118,9 +118,9 @@ const typeDefs = `#graphql
     name: String!
     studentID: String!
     password: String!
-    photoLink: String!   
-    threeDPId: Int           
-    laserCutAvailable: Boolean!        
+    photoLink: String!
+    threeDPId: Int
+    laserCutAvailable: Boolean!
     isAdmin: Boolean!
   }
 
@@ -144,7 +144,7 @@ const typeDefs = `#graphql
     content: String!
   }
 
-  input DisposableMaterialInput {  
+  input DisposableMaterialInput {
     name: String!
     partName: String
     category: String!
@@ -158,7 +158,7 @@ const typeDefs = `#graphql
   }
 
   type DisposableMaterial {
-    id: Int!     
+    id: Int!
     name: String!
     partName: String
     category: String!
@@ -227,7 +227,7 @@ const typeDefs = `#graphql
   }
 
   type ThreeDP {
-    id:           Int!    
+    id:           Int!
     name:         String!
     category:     String!
     position:     String!

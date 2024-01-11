@@ -4,7 +4,7 @@ import fs from 'fs'
 const initUserData = JSON.parse(fs.readFileSync('./data/user.json', 'utf-8')).user;
 
 const initUserDB = async () => {
-    
+
     for (let i = 0; i < initUserData.length; i++) {
         try {
             await prisma.user.create({
