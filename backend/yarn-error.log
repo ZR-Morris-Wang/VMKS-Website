@@ -1,22 +1,22 @@
-Arguments: 
+Arguments:
   /home/amy930629/.nvm/versions/node/v18.16.0/bin/node /home/amy930629/.cache/node/corepack/yarn/1.22.19/bin/yarn.js install
 
-PATH: 
+PATH:
   /home/amy930629/.nvm/versions/node/v18.16.0/bin:/home/amy930629/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/bin/remote-cli:/home/amy930629/.local/share/pnpm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Microsoft/jdk-11.0.12.7-hotspot/bin:/mnt/c/Users/ilove/Scripts/:/mnt/c/Users/ilove/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/Pulse Secure/VC142.CRT/X64/:/mnt/c/Program Files (x86)/Pulse Secure/VC142.CRT/X86/:/mnt/c/Program Files (x86)/Common Files/Pulse Secure/TNC Client Plugin/:/mnt/c/Program Files/Git/cmd:/Docker/host/bin:/mnt/c/Users/ilove/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ilove/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ilove/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/ilove/Infineon/LauncherService:/snap/bin
 
-Yarn version: 
+Yarn version:
   1.22.19
 
-Node version: 
+Node version:
   18.16.0
 
-Platform: 
+Platform:
   linux x64
 
-Trace: 
+Trace:
   Error: ENOENT: no such file or directory, copyfile '/home/amy930629/.cache/yarn/v6/npm-ms-2.1.2-d09d1f357b443f493382a8eb3ccd183872ae6009-integrity/node_modules/ms/index.js' -> '/home/amy930629/VMKS-Website/backend/node_modules/@babel/core/node_modules/ms/index.js'
 
-npm manifest: 
+npm manifest:
   {
     "name": "backend",
     "version": "1.0.0",
@@ -62,8 +62,8 @@ npm manifest:
     "type": "module"
   }
 
-yarn manifest: 
+yarn manifest:
   No manifest
 
-Lockfile: 
+Lockfile:
   No lockfile

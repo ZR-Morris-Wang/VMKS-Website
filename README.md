@@ -2,10 +2,10 @@
 
 <p align="center">
     <img src="https://user-images.githubusercontent.com/90591931/262723964-96c0b3ac-ffa2-46cb-967f-b19286ca6dfe.png" alt="Logo" width="150" height="150">
-</p> 
-  
-## Development  
-### Step 1 : Use Specific NodeJS Version  
+</p>
+
+## Development
+### Step 1 : Use Specific NodeJS Version
 This can switch NodeJS version to v18.16.0(You should first have NodeJS v18.16.0 installed)
 
 ```sh

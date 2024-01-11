@@ -471,7 +471,7 @@ const Mutation = {
             throw new Error("ThreeDP Not Found");
         }
 
-        // checks if any user is linked to this threeDP instead of checking if the 
+        // checks if any user is linked to this threeDP instead of checking if the
         // waiting line is empty is to minimize and simplify input variables
         const findAffiliatedUser = await prisma.user.findMany({
             where: {
@@ -494,14 +494,14 @@ const Mutation = {
 
     EditThreeDP: async(_parents, args: { id: number, threeDPInput: ThreeDPInput }, context) => {
         const id = args.id;
-        const { name, category, position, 
+        const { name, category, position,
                 description, photoLink, usage, tutorialLink, broken } = args.threeDPInput;
         const findThreeDP = await prisma.threeDP.findFirst({
-            where: { 
-                id: id 
+            where: {
+                id: id
             }
         });
-        if (!findThreeDP) { 
+        if (!findThreeDP) {
             throw new Error("threeDP not found!");
         }
 
@@ -604,11 +604,11 @@ const Mutation = {
         const id = args.id;
         const { name, partName, borrowerId, borrowNum, borrowDate, returnDate, status} = args.userMaterialEditInput;
         const findUserMaterial = await prisma.userMaterial.findFirst({
-            where: { 
-                id: id 
+            where: {
+                id: id
             }
         });
-        if (!findUserMaterial) { 
+        if (!findUserMaterial) {
             throw new Error("userMaterial not found!");
         }
 
@@ -734,7 +734,7 @@ const Mutation = {
             throw new Error(`User With id: ${id} Not Found`)
         }
 
-        // checks if any userMaterial is linked to this user instead of checking if the 
+        // checks if any userMaterial is linked to this user instead of checking if the
         // borrowHistory is empty is to minimize and simplify input variables
         const findNotReturnedMaterials = await prisma.userMaterial.findMany({
             where: {
@@ -778,11 +778,11 @@ const Mutation = {
         const id = args.id;
         const { name, studentID, password, photoLink, isAdmin } = args.userEditInput;
         const findUser = await prisma.user.findFirst({
-            where: { 
-                id: id 
+            where: {
+                id: id
             }
         });
-        if (!findUser) { 
+        if (!findUser) {
             throw new Error("user not found!");
         }
 
@@ -806,16 +806,16 @@ const Mutation = {
         const id = args.id;
         const { threeDPId, laserCutAvailable} = args.userMachineUpdateInput;
         const findUser = await prisma.user.findFirst({
-            where: { 
-                id: id 
+            where: {
+                id: id
             }
         });
-        if (!findUser) { 
+        if (!findUser) {
             throw new Error("user not found!");
         }
 
         const oldThreeDPId = findUser.threeDPId;
-        
+
         if(threeDPId !== oldThreeDPId){
             if(oldThreeDPId !== null){
                 const oldThreeDP = await prisma.threeDP.findFirst({
@@ -841,7 +841,7 @@ const Mutation = {
                     throw new Error("update old threeDP failed!");
                 }
             }
-            
+
             if(threeDPId !== null){
                 const newThreeDP = await prisma.threeDP.findFirst({
                     where: {
@@ -881,7 +881,7 @@ const Mutation = {
     },
 
     AddArticle: async (_parents: any, args: { articleInput: ArticleInput }, context: any) => {
-        const { writerId, description, imageURL, title, 
+        const { writerId, description, imageURL, title,
                 headline, content, userpic } = args.articleInput;
         const findWriter = await prisma.user.findFirst({
             where: {

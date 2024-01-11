@@ -11,10 +11,10 @@ export const GlobalStyles = createGlobalStyle`
     //background-color: #000000;
     color: white;
     //color-scheme: dark;
-    height: 100%; 
+    height: 100%;
     margin: 0;
     background-image: url("../../assets/vmks_dusk_ui_bg_v2.png");
-    background-size: cover; 
+    background-size: cover;
     background-position: center center;
     z-index: -1;
   }

@@ -103,8 +103,8 @@ interface UserInput {
     studentID: string,
     password: string,
     photoLink: string,
-    threeDPId: number,            
-    laserCutAvailable: boolean,    
+    threeDPId: number,
+    laserCutAvailable: boolean,
     isAdmin: boolean
 }
 
@@ -131,8 +131,8 @@ interface ArticleInput {
     userpic: string,
 }
 
-export type { AnnouncementInput, ToolInput, UserMaterialInput, 
-        UserMaterialEditInput, ThreeDPInput, UserInput, 
-        UserEditInput, UserMachineUpdateInput, ToolUsageUpdateInput, 
-        DisposableMaterialInput, DisposableMaterialUsageUpdateInput, 
+export type { AnnouncementInput, ToolInput, UserMaterialInput,
+        UserMaterialEditInput, ThreeDPInput, UserInput,
+        UserEditInput, UserMachineUpdateInput, ToolUsageUpdateInput,
+        DisposableMaterialInput, DisposableMaterialUsageUpdateInput,
         MachineInput, MaterialInput, MaterialUsageUpdateInput, ArticleInput }
